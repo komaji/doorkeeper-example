@@ -9,7 +9,7 @@ Doorkeeper.configure do
     User.authenticate(params) if server.client
   end
 
-  access_token_expires_in 2.hours
+  access_token_expires_in 20.seconds
   use_refresh_token
   default_scopes  :public
   grant_flows %w[authorization_code client_credentials password]
